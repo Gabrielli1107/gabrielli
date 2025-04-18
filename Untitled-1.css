@@ -1,0 +1,85 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #fff0f5;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #ff1493;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #ccc;
+}
+
+.escolha {
+    margin: 20px 0;
+}
+
+label {
+    font-size: 1.2em;
+    padding: 10px 20px;
+    margin: 10px;
+    display: inline-block;
+    background-color: #ff69b4;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+label:hover {
+    background-color: #ff1493;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+/* Corações quando está bem */
+#bem:checked ~ .resposta-bem {
+    display: block;
+}
+
+.resposta-bem {
+    display: none;
+    font-size: 2em;
+    color: #ff1493;
+    animation: pulso 2s infinite;
+}
+
+@keyframes pulso {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Mensagem carinhosa e buquê quando está mal */
+#mal:checked ~ .resposta-mal {
+    display: block;
+}
+
+.resposta-mal {
+    display: none;
+    margin-top: 20px;
+}
+
+.resposta-mal input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 80%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.resposta-mal img {
+    margin-top: 20px;
+    width: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #aaa;
+}
